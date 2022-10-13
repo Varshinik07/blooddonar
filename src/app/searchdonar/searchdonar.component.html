@@ -6,11 +6,11 @@
             <div class="row g-3">
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Donar Name</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="donarname"[(ngModel)]="donarname">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Blood Group</label>
-                    <select name="" id="" class="form-control">
+                    <select name="" id="" class="form-control" name="bloodgroup"[(ngModel)]="bloodgroup">
                         <option value="">O+</option>
                         <option value="">O-</option>
                         <option value="">A+</option>
@@ -22,7 +22,7 @@
                     </select>
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <button class="btn btn-primary">Search</button>
+                    <button class="btn btn-primary" (click)="readValues()">Search</button>
                 </div>
             </div>
         </div>
