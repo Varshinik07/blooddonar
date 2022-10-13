@@ -1,14 +1,15 @@
+<app-navbar></app-navbar>
 <div class="container">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col xxl-12">
             <div class="row g-3">
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Donar Name</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="name"[(ngModel)]="name">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Blood Group</label>
-                    <select name="" id="" class="form-control">
+                    <select name="" id="" class="form-control" name="bloodgroup"[(ngModel)]="bloodgroup">
                         <option value="">O+</option>
                         <option value="">O-</option>
                         <option value="">A+</option>
@@ -21,39 +22,39 @@
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">DOB</label>
-                    <input type="text" class="form-control date">
+                    <input type="date" class="form-control date" name="dob"[(ngModel)]="dob">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Last Donation date</label>
-                    <input type="text" class="form-control date">
+                    <input type="date" class="form-control date" name="lastdonation"[(ngModel)]="lastdonation">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Previous donation date</label>
-                    <input type="text" class="form-control date">
+                    <input type="date" class="form-control date" name="previousdonation"[(ngModel)]="previousdonation">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Previous vaccination date</label>
-                    <input type="text" class="form-control date">
+                    <input type="date" class="form-control date" name="Previousvaccination"[(ngModel)]="Previousvaccination">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Address</label>
-                    <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" class="form-control" name="address"[(ngModel)]="address"></textarea>
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Pincode</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="pincode"[(ngModel)]="pincode">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Mobile number</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control"name="mobilenumber"[(ngModel)]="mobilenumber">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">EmailId</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="emailid"[(ngModel)]="emailid">
                 </div>
                
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-<button class="btn btn-primary">Submit</button>
+<button class="btn btn-primary" (click)="readValues()">Submit</button>
                 </div>
             </div>
         </div>
